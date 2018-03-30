@@ -13,4 +13,4 @@ def about():
     return 'Saya Herlan'
 
 
-app.run( host='localhost', debug=True, port=8092 )
+app.run(host='0.0.0.0', debug=True, port=8092)
