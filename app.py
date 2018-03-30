@@ -10,7 +10,7 @@ def index():
 
 @app.route('/about')
 def about():
-    return 'Saya Eko'
+    return 'Saya Herlan'
 
 
-app.run( host='0.0.0.0', debug=True, port=8090 )
+app.run( host='localhost', debug=True, port=8092 )
