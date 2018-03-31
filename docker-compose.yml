@@ -3,7 +3,7 @@ version: '2'
 services:
   herlan-cms:
     build: .
-    command:gunicorn -b 0.0.0.0:8000 --access-logfile - --reload "herlan-cms.app:create_app()"
+    command: gunicorn -b 0.0.0.0:8000 --access-logfile - --reload "herlan-cms.app:create_app()"
     environment:
       PYTHONUNBUFFERED: 'true'
     volumes:
