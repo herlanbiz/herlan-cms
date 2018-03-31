@@ -4,7 +4,7 @@ MAINTAINER Herlan Biz <herlanbiz@gmail.com>
 RUN apt-get update && apt-get install -qq -y \
   build-essential libpq-dev --no-install-recommends
 
-ENV INSTALL_PATH /web_app01
+ENV INSTALL_PATH /herlan-cms
 RUN mkdir -p $INSTALL_PATH
 
 WORKDIR $INSTALL_PATH
@@ -14,4 +14,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD gunicorn -b 0.0.0.0:5000 --access-logfile - "web_app01.app:create_app()"
+CMD gunicorn -b 0.0.0.0:8000 --access-logfile - "herlan-cms.app:create_app()"
