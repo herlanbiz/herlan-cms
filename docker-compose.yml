@@ -9,7 +9,7 @@ services:
     volumes:
       - '.:/herlan-cms'
     ports:
-      - '8000:8000'
+      - '8082:8082'
 
 #  postgres:
 #    image: 'postgres:9.5'
