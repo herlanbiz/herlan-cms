@@ -1,16 +1,18 @@
 from flask import Flask
 
-app = Flask(__name__)
+def create_app():
+
+    app = Flask(__name__)
 
 
-@app.route('/')
-def index():
-    return 'Hello world!'
+    @app.route('/')
+    def index():
+        return 'Hello world!'
 
 
-@app.route('/about')
-def about():
-    return 'Saya Herlan'
+    @app.route('/about')
+    def about():
+        return 'Saya Herlan'
 
-
-app.run(host='0.0.0.0', debug=True, port=8082)
+    return app
+# app.run(host='0.0.0.0', debug=True, port=8082)
